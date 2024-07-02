@@ -6,6 +6,8 @@
 - `alembic upgrade head`
 - `uvicorn main:app --reload`
 
+## Update database link in main.py
+
 ## add this line in alembic/env.py
 ```
 DATABASE_URI = 'postgresql://postgres:postgres@localhost/inshorts'
