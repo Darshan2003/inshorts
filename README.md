@@ -5,3 +5,12 @@
 - `alembic revision --autogenerate -m "New Migration"`
 - `alembic upgrade head`
 - `uvicorn main:app --reload`
+
+## add this line in alembic/env.py
+```
+DATABASE_URI = 'postgresql://postgres:postgres@localhost/inshorts'
+config.set_main_option('sqlalchemy.url', DATABASE_URI)
+
+from database import models
+target_metadata = models.Base.metadata
+```
